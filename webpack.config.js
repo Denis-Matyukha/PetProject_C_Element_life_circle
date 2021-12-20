@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
@@ -17,7 +18,24 @@ module.exports = {
             {
                 test: /\.[tj]sx?$/,
                 use: ['ts-loader'],
-            }
+            },
+            {
+                test: /\.(s*)css$/,
+                use: [
+                    'style-loader', 
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                mode: 'local',
+                                localIdentName: '[name]__[local]__[hash:base64:5]',
+                                auto: /\.modules\.\w+$/i,
+                            },
+                        }
+                    },
+                    'sass-loader'
+                ],
+            },
         ]
     },
     plugins: [
@@ -29,5 +47,54 @@ module.exports = {
         port: 3000,
         open: true,
         hot: true,
-    }
+    },
+    devtool: 'source-map',
+    performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
 };
+
+console.log(`
+
+
+↓↓↓_NODE_ENV_↓↓↓
+
+`);
+console.log(NODE_ENV);
+console.log(`
+
+
+↓↓↓_process.env.NODE_ENV_↓↓↓
+
+`);
+console.log(process.env.NODE_ENV);
+console.log(`
+
+
+↓↓↓_process.env_↓↓↓
+
+`);
+console.log(process.env);
+console.log(`
+
+
+↓↓↓_process_↓↓↓
+
+`);
+console.log(process);
+console.log(`
+
+
+↓↓↓_module.exports_↓↓↓
+
+`);
+console.log(module.exports);
+
+console.log(`
+
+
+↓↓↓_module.exports.mode_↓↓↓
+
+`);
+console.log(module.exports.mode);

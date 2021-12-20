@@ -1,0 +1,5 @@
+.underline {
+    border: 1px solid rgb(255, 180, 180);
+    padding: 1em;
+    /* text-decoration: overline wavy; */
+}
