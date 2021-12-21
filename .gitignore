@@ -1,0 +1,7 @@
+node_modules/
+# .lock/
+.vscode/
+# .gitignore
+# yarn-error.log
+# yarn.lock
+src/**.d.ts

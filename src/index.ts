@@ -6,4 +6,4 @@ import './index.css';
 
 console.log(`App→${App}`);
 
-ReactDom.render(<App/>, document.getElementById('root'));
+ReactDom.render(React.createElement(App), document.getElementById('root'));
