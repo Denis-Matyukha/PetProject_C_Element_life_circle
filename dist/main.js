@@ -30481,7 +30481,10 @@ const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules
 const classnames_1 = __importDefault(__webpack_require__(/*! classnames */ "./node_modules/classnames/index.js"));
 const App_module_scss_1 = __importDefault(__webpack_require__(/*! ./App.module.scss */ "./src/App.module.scss"));
 const App = () => {
-    return (react_1.default.createElement("div", { className: classnames_1.default(App_module_scss_1.default.header, 'underline') }, "App component =^_^="));
+    console.log(`test_clg`);
+    console.log(`s↓`);
+    console.log(App_module_scss_1.default);
+    return react_1.default.createElement("div", { className: classnames_1.default(App_module_scss_1.default.header, 'underline') }, "App component =^_^=");
 };
 exports.default = App;
 
