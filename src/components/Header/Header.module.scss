@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  min-height: 160px;
+  background-color: rgba(0, 105, 70, 0.2);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 1340px;
+  margin: 0 auto;
+  padding: 15px 0;
+  border-radius: 10px;
+
+  pre {
+    background-color: #87dec6;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 2px 1px #22cb6e;
+    flex: 0 1 calc(20% - 180px);
+    text-align: center;
+    font-size: 20px;
+    color: rgba(76, 147, 142, 0.78);
+    font-family: sans-serif;
+  }
+}

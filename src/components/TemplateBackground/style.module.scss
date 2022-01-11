@@ -1,0 +1,99 @@
+.TemplateBase {
+  // background: rgb(9, 93, 99);
+  overflow: hidden;
+}
+
+@media (orientation: portrait) {
+  .template_base::before {
+    background-size: contain;
+
+    display: block;
+
+    content: 'After_EL';
+
+    background: url(./assets/bkInitial2.jpg);
+    // background: url(./assets/bkInitial.jpg) no-repeat;
+    // background: url(./assets/bkInitial.jpg) no-repeat center center fixed;
+
+    // background-repeat: round;
+    // background-repeat:round;
+    background-repeat: no-repeat;
+
+    transition: transform 10s ease-in-out;
+    // height: calc(var(--vh, 1vh) * 100);
+    // height: calc(var(--vh, 1vh) * 50);
+    // height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    // height: calc(100%);
+    // width: 100%;
+    // border: 5px solid red;
+    // outline: 5px solid red;
+
+    // position: absolute;
+    // top: 0;
+  }
+
+  .template_base:hover:before {
+    // transform: translate(-40vw, 0) scale(1.2) rotate(-3deg);
+    // transform: translate(-40vw, 0);
+    transform: translate(0vw, 20vh) scale(1.4);
+  }
+
+  // body:hover:before {
+  //     // transform: translate(-40vw, 0) scale(1.2) rotate(-3deg);
+  //     transform: translate(-40vw, -20vh) scale(.8) rotate(3deg);
+  // }
+
+  // body:hover:after {
+  //     transform: translate(0%, -10%);
+  // }
+}
+
+@media (orientation: landscape) {
+  .template_base::before {
+    background-size: cover;
+    display: block;
+    // position: absolute;
+    content: 'After_EL';
+    // background-image: url(./assets/bkInitial.jpg);
+    // background: url(./assets/bkInitial.jpg) no-repeat center center fixed;
+    background: url(./assets/bkInitial.jpg);
+    // background-image: url(./assets/bkWide.jpg);
+    // background-position: (-10vw 0);
+    // background-position: (-10vw 0);
+    background-repeat: no-repeat;
+    background-position: top;
+    // transition: transform .2s;
+    transition: transform 10s ease-in-out;
+    // transition: transform 30s ease-in-out;
+    // transition: transform 20s ease-in-out;
+    // height: 100vh;
+    height: 100vh;
+    // width: 100%;
+    // width: auto;
+    // outline: 1px solid orange;
+    // padding: 10px;
+    // translate: (-100%, 0%);
+    // autofocus: auto;
+  }
+
+  .template_base:hover:before {
+    // transform: translate(-40vw, 0) scale(1.2) rotate(-3deg);
+    // transform: translate(-40vw, 0);
+    transform: translate(0vw, 20vh) scale(1.4);
+  }
+
+  // body:hover:before {
+  //     // transform: translate(-40vw, 0) scale(1.2) rotate(-3deg);
+  //     transform: translate(-40vw, -20vh) scale(.8) rotate(3deg);
+  // }
+
+  // body:hover:after {
+  //     transform: translate(0%, -10%);
+  // }
+}
+
+/* 
+.template_base {
+  height: 100vh;
+} */
